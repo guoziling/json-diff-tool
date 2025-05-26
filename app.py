@@ -7,8 +7,9 @@ st.set_page_config(page_title="JSON 差異比對工具", layout="wide")
 
 st.title("🧪 JSON 差異比對工具")
 
-uploaded_file1 = st.file_uploader("請上傳第一個檔案（.json 或 .txt）", type=["json", "txt"], key="file1")
-uploaded_file2 = st.file_uploader("請上傳第二個檔案（.json 或 .txt）", type=["json", "txt"], key="file2")
+uploaded_file1 = st.file_uploader("請上傳第一個檔案（不限副檔名，內容需為 JSON）", key="file1")
+uploaded_file2 = st.file_uploader("請上傳第二個檔案（不限副檔名，內容需為 JSON）", key="file2")
+
 
 def try_load_json(file, label):
     try:
